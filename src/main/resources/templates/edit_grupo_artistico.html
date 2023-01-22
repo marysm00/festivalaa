@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+#menu li>a {
+	background-color: #6F2491;
+	color: white;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+}
+
+#menu li>a:hover {
+	color: white;
+	background-color: #6F2491;
+}
+
+#menu>li {
+	float: left;
+	text-align: center
+}
+
+#menu>li>ul {
+	display: none;
+}
+
+#menu>li:hover>ul {
+	display: block;
+}
+
+#color {
+	background-color: #6F2491;
+}
+
+#sin {
+	background-color: #310646;
+}
+
+#border {
+	border-radius: 0px 100px 0px 100px;
+}
+
+#fig {
+	border-radius: 0px 50px 0px 50px;
+}
+
+#colorl {
+	color: beige;
+}
+
+.img-fluida {
+	width: 3000px;
+	height: 1900px;
+}
+
+.nueva {
+	width: 200px;
+	height: 300px;
+	margin-bottom: 100px;
+	padding-bottom: 100px;
+}
+
+#au {
+	padding: 10%;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+#final {
+	position: relative;
+	right: -120px;
+}
+
+.escribir {
+	color: white;
+}
+
+#color {
+	background-color: #6F2491;
+}
+
+#sin {
+	background-color: #310646;
+}
+
+#border {
+	border-radius: 0px 100px 0px 100px;
+}
+
+#fig {
+	border-radius: 0px 50px 0px 50px;
+}
+
+#colorl {
+	color: beige;
+}
+
+.img-fluida {
+	width: 3000px;
+	height: 1900px;
+}
+
+.nueva {
+	width: 200px;
+	height: 300px;
+	margin-bottom: 100px;
+	padding-bottom: 100px;
+}
+
+#flo {
+	position: fixed;
+}
+
+#au {
+	padding: 10%;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+#final {
+	position: relative;
+	right: -120px;
+}
+
+.escribir {
+	color: white;
+}
+
+@media screen {
+}
+
+.center {
+	text-align: center;
+}
+
+.main>div {
+	display: inline-block;
+	width: 49%;
+	margin-top: 10px;
+}
+
+.two .register {
+	border: none;
+}
+
+.two .register h3 {
+	border-bottom-color: #909090;
+}
+
+.two .register .sep {
+	border-color: #909090;
+}
+
+.register {
+	width: 500px;
+	margin: 40px auto;
+	padding: 10px;
+	border: 7px solid #72B372;
+	border-radius: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444;
+	background-color: #F0F0F0;
+	box-shadow: 0 0 20px 0 #000000;
+	justify-content: center;
+	top: 50%;
+	left: 50%;
+	position: relative;
+}
+
+.register h3 {
+	margin: 0 15px 20px;
+	border-bottom: 2px solid #72B372;
+	padding: 5px 10px 5px 0;
+	font-size: 1.1em;
+}
+
+.register div {
+	margin: 0 0 15px 0;
+	border: none;
+}
+
+.register label {
+	display: inline-block;
+	width: 25%;
+	text-align: right;
+	margin: 10px;
+}
+
+.register input[type=text], .register input[type=password] {
+	width: 65%;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+	padding: 5px;
+	font-size: 0.9em;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.07);
+}
+
+.register input[type=text]:focus, .register input[type=password]:focus {
+	background: #FFFFFF;
+}
+
+.register .button {
+	font-size: 1em;
+	color: white;
+	border-radius: 8px;
+	padding: 10px;
+	border: 1px solid #6F2491;
+	box-shadow: 0 1px 0 0 #6F2491;
+	background: #6F2491;
+	background: -webkit-linear-gradient(#6F2491, #6F2491);
+	background: -moz-linear-gradient(#6F2491, #6F2491);
+	background: -o-linear-gradient(#6F2491, #6F2491);
+	background: linear-gradient(#6F2491, #6F2491);
+}
+
+.register .sep {
+	border: 1px solid #72B372;
+	position: relative;
+	margin: 35px 20px;
+}
+
+.register .or {
+	position: absolute;
+	width: 50px;
+	left: 50%;
+	background: #F0F0F0;
+	text-align: center;
+	margin: -10px 0 0 -25px;
+	line-height: 20px;
+}
+
+.register .connect {
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.register .social-buttons {
+	display: inline-block;
+	min-width: 150px;
+	height: 50px;
+	margin: 0 5px 10px;
+	border-radius: 10px;
+	text-shadow: 1px 1px 5px #000000;
+}
+
+.register .social-buttons a {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 10px 15px;
+}
+
+.register .social-buttons span {
+	font-size: 30px;
+	margin-left: 35px;
+}
+
+.register .facebook {
+	background: #415EA3;
+	background: -webkit-linear-gradient(#415EA3, #2E4A88);
+	background: -moz-linear-gradient(#415EA3, #2E4A88);
+	background: -o-linear-gradient(#415EA3, #2E4A88);
+	background: linear-gradient(#415ea3, #2e4a88);
+}
+
+.register .facebook:hover {
+	background: #3B5591;
+	background: -webkit-linear-gradient(#3B5591, #2A437C);
+	background: -moz-linear-gradient(#3B5591, #2A437C);
+	background: -o-linear-gradient(#3B5591, #2A437C);
+	background: linear-gradient(#3b5591, #2a437c);
+}
+
+.register .facebook a {
+	background: url(../images/logo_fb_31x42.png) no-repeat 5% 10%;
+}
+
+.register .twitter {
+	background: #41C0F3;
+	background: -webkit-linear-gradient(#41C0F3, #3FBAEC);
+	background: -moz-linear-gradient(#41C0F3, #3FBAEC);
+	background: -o-linear-gradient(#41C0F3, #3FBAEC);
+	background: linear-gradient(#41c0f3, #3fbaec);
+}
+
+.register .twitter:hover {
+	background: #3EB1DF;
+	background: -webkit-linear-gradient(#3EB1DF, #3EAAD6);
+	background: -moz-linear-gradient(#3EB1DF, #3EAAD6);
+	background: -o-linear-gradient(#3EB1DF, #3EAAD6);
+	background: linear-gradient(#3eb1df, #3eaad6);
+}
+
+.register .twitter a {
+	background: url(../images/logo_twitter_38x32.png) no-repeat 6% 25%;
+}
+</style>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Festival de Artistas Aficionados</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+<link href="vendor/mdi-font/css/material-design-iconic-font.min.css"
+	rel="stylesheet" media="all">
+<link href="vendor/font-awesome-4.7/css/font-awesome.min.css"
+	rel="stylesheet" media="all">
+<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="vendor/datepicker/daterangepicker.css" rel="stylesheet"
+	media="all">
+
+</head>
+
+<body>
+
+	<header>
+
+
+		<div class="container-fluid" id="flo">
+			<div class="row  " id="color">
+				<div class="col gap-5">
+					<div class="container-fluid  text-white">
+
+						<div class="col">
+							<nav class="nav gaptext-dark  d-flex justify-content-center  ">
+								<nav class="navbar navbar-expand-lg ">
+									<div class="container-fluid">
+										<nav>
+											<ul id="menu">
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="/index"><strong>
+															INICIO</strong></a></li>
+
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>INSCRIPCIONES</strong></a>
+													<ul>
+
+														<li><a th:href="@{/listar_formularios}"><strong>FORMULARIO
+																	DE INSCRIPCIÓN</strong></a></li>
+
+													</ul></li>
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>CALENDARIO</strong></a></li>
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="/informacion"><strong>INFORMACIÓN</strong></a></li>
+
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>GESTIONAR</strong></a>
+													<ul>
+
+
+														<li><a th:href="@{/listar_artistas}"><strong>ARTISTA</strong></a></li>
+														<li><a th:href="@{/listar_jurados}"><strong>JURADO</strong></a></li>
+														<li><a th:href="@{/listar_premios}"><strong>PREMIO</strong></a></li>
+														<li><a th:href="@{/listar_grupo_artisticos}"><strong>GRUPO
+																	ARTÍSTICO</strong></a></li>
+														<li><a th:href="@{/listar_usuarios}"><strong>USUARIO</strong></a></li>
+
+													</ul></li>
+												<li>
+													<form>
+
+														<input type="text" id="fname" name="Buscar" size="10">
+														<button class="btn btn-outline-light" type="button">
+															<svg width="20" height="20" class="DocSearch-Search-Icon"
+																viewBox="0 0 20 20">
+                                                                        <path
+																	d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+																	stroke="currentColor" fill="none" fill-rule="evenodd"
+																	stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                    </svg>
+														</button>
+
+
+													</form>
+												</li>
+												<li>
+													<form>
+														<div class="col container-fluid  " id="final">
+															<a href="#" class="dropdown-toggle nav-link user-link"
+																data-toggle="dropdown" aria-expanded="false"><span
+																class="user-img"><img class="rounded-circle"
+																	src="images/icons/purple-linear-outline-person-icon-1578932.jpg"
+																	alt="Perfil" width="24"><span
+																	class="status online"></span></span><span class="escribir">Perfil
+
+															</span></a>
+														</div>
+													</form>
+
+												</li>
+
+											</ul>
+										</nav>
+
+
+
+
+
+
+
+									</div>
+						</div>
+
+
+
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+	</header>
+	<br>
+	<br>
+	<br>
+	<form action="#" th:action="@{/guardar_grupo_artistico}"
+		th:object="${grupo_artistico}" method="POST">
+		<div class="main" id="main">
+
+			<div class="two">
+				<div class="register">
+					<h3>Editar Grupo Artístico</h3>
+
+					<div>
+						<input type="hidden" th:field="*{id_grupo_artistico}" />
+					</div>
+
+
+					<div>
+						<label for="name1">Nombre</label> <input type="text"
+							th:field="*{nombre}" id="name1" spellcheck="false" />
+					</div>
+					<div>
+						<label for="modalidad1">Modalidad</label> <input type="text"
+							th:field="*{modalidad}" id="modalidad1" spellcheck="false" />
+					</div>
+					<div>
+						<label></label> <input type="submit" value="Aceptar" id="aceptar1"
+							class="button" /> <input a th:href="@{/listar_grupo_artisticos}"
+							type="submit" value="Cancelar" id="cancelar1" class="button" />
+
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+	</form>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+
+	<div class="container-fluid">
+		<div class="row   flex-column " id="color">
+			<div class="col">
+				<footer class="py-3">
+					<div class="container text-light text-center ">
+						<div class="row ">
+							<div class="col">
+								<h5>
+									<strong> PUEDES ENCONTRARNOS EN:</strong>
+								</h5>
+							</div>
+
+							<div class="container">
+								<div class="row gap-1  justify-content-center py-lg-3">
+									<div class="col-1">
+										<img src="images/icons/icons8-whatsapp.svg"
+											class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1 "
+											alt="icons8-whatsapp">
+									</div>
+									<div class="col-1">
+										<img src="images/icons/icons8-aplicación-telegrama.svg"
+											class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+											alt="icons8-aplicación-telegrama">
+									</div>
+									<div class="col-1">
+										<img src="images/icons/icons8-facebook-f.svg"
+											class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+											alt="icons8-facebook-f">
+									</div>
+									<div class="col-1">
+										<img src="images/icons/icons8-twitter.svg"
+											class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+											alt="icons8-twitter">
+									</div>
+									<div class="col-1">
+										<img src="images/icons/icons8-instagram-viejo.svg"
+											class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+											alt="icons8-instagram-viejo">
+									</div>
+								</div>
+								<div class="container text-light  text-center">
+									<div class="row ">
+										<div class="col">
+											<p4>Universidad de las Ciencias Informáticas La
+											Habana,Cuba.Todos los derechos reservados </p4>
+										</div>
+									</div>
+								</div>
+							</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/datepicker/moment.min.js"></script>
+	<script src="vendor/datepicker/daterangepicker.js"></script>
+	<script src="js/global.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<style>
+
+
+ul {
+	list-style: none;
+}
+
+#menu li>a {
+	background-color: #6F2491;
+	color: white;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+}
+
+#menu li>a:hover {
+	color: white;
+	background-color: #6F2491;
+}
+
+#menu>li {
+	float: left;
+	text-align: center
+}
+
+#menu>li>ul {
+	display: none;
+}
+
+#menu>li:hover>ul {
+	display: block;
+}
+
+#color {
+	background-color: #6F2491;
+}
+
+#sin {
+	background-color: #310646;
+}
+
+#border {
+	border-radius: 0px 100px 0px 100px;
+}
+
+#fig {
+	border-radius: 0px 50px 0px 50px;
+}
+
+#colorl {
+	color: beige;
+}
+
+.img-fluida {
+	width: 3000px;
+	height: 1900px;
+}
+
+.nueva {
+	width: 200px;
+	height: 300px;
+	margin-bottom: 100px;
+	padding-bottom: 100px;
+}
+
+#au {
+	padding: 10%;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+#final {
+	position: relative;
+	right: -120px;
+}
+
+.escribir {
+	color: white;
+}
+    #color {
+        background-color: #6F2491;
+    }
+
+    #sin {
+        background-color: #310646;
+    }
+
+    #border {
+        border-radius: 0px 100px 0px 100px;
+    }
+
+    #fig {
+        border-radius: 0px 50px 0px 50px;
+    }
+
+    #colorl {
+        color: beige;
+    }
+
+    .img-fluida {
+        width: 500px;
+        height: 100px;
+    }
+
+    .nueva {
+        width: 200px;
+        height: 300px;
+        margin-bottom: 100px;
+        padding-bottom: 100px;
+    }
+
+    #flo {
+        position: fixed;
+
+    }
+
+    #au {
+        padding: 10%;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+
+    #final {
+        position: relative;
+        right: -120px;
+    }
+
+    .escribir {
+        color: white;
+    }
+</style>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Festival de Artistas Aficionados</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+
+        <div class="container-fluid" id="flo">
+            <div class="row  " id="color">
+                <div class="col gap-5">
+                    <div class="container-fluid  text-white">
+                        <!--<button type="button" class="btn btn-outline-light " id="flo">Iniciar Sesion</button>-->
+
+                        <div class="col">
+							<nav class="nav gaptext-dark  d-flex justify-content-center  ">
+								<nav class="navbar navbar-expand-lg ">
+									<div class="container-fluid">
+										<nav>
+											<ul id="menu">
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="/index"><strong>
+															INICIO</strong></a></li>
+
+														<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>INSCRIPCIONES</strong></a>
+													<ul>
+
+														<li><a th:href="@{/listar_formularios}"><strong>FORMULARIO
+																	DE INSCRIPCIÓN</strong></a></li>
+
+													</ul></li>
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>CALENDARIO</strong></a></li>
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="/informacion"><strong>INFORMACIÓN</strong></a></li>
+
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>GESTIONAR</strong></a>
+													<ul>
+
+
+														<li><a th:href="@{/listar_artistas}"><strong>ARTISTA</strong></a></li>
+														<li><a th:href="@{/listar_jurados}"><strong>JURADO</strong></a></li>
+														<li><a th:href="@{/listar_premios}"><strong>PREMIO</strong></a></li>
+														<li><a th:href="@{/listar_grupo_artisticos}"><strong>GRUPO
+																	ARTÍSTICO</strong></a></li>
+														<li><a th:href="@{/listar_usuarios}"><strong>USUARIO</strong></a></li>
+
+													</ul></li>
+												<li>
+													<form>
+
+														<input type="text" id="fname" name="Buscar" size="10">
+														<button class="btn btn-outline-light" type="button">
+															<svg width="20" height="20" class="DocSearch-Search-Icon"
+																viewBox="0 0 20 20">
+                                                                        <path
+																	d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+																	stroke="currentColor" fill="none" fill-rule="evenodd"
+																	stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                    </svg>
+														</button>
+
+
+													</form>
+												</li>
+												<li>
+													<form>
+														<div class="col container-fluid  " id="final">
+															<a href="#" class="dropdown-toggle nav-link user-link"
+																data-toggle="dropdown" aria-expanded="false"><span
+																class="user-img"><img class="rounded-circle"
+																	src="images/icons/purple-linear-outline-person-icon-1578932.jpg"
+																	alt="Perfil" width="24"><span
+																	class="status online"></span></span><span class="escribir">Perfil
+
+															</span></a>
+														</div>
+													</form>
+
+												</li>
+
+											</ul>
+										</nav>
+
+
+
+
+
+
+
+									</div>
+						</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <br><br><br>
+
+
+    <div class="container-fluid">
+        <div class="row   text-center text-secondary py-2 pe-md-3 ">
+            <div class="col">
+                <h3>INFORMACIÓN</h3>
+                <p>En la universidad cubana actual se potencia el Movimiento de Artistas Aficionados de la FEU como
+                    forma de revitalización cultural de
+                    las universidades donde "decenas de unidades artísticas ostentan la categoría superior otorgada
+                    por
+                    jurados especializados del Consejo de Casas de Cultura" </p>
+
+
+                <table style="width:100%">
+                    <tr>
+                        <td>
+            </div>
+            <div class="container text-secondary">
+                <div class="row align-items-start py-4 ">
+                    <div class="col">
+                        <h1><strong></strong></h1>
+                        <p class="h5">
+                            En el año 1963 se organizan en Cuba los primeros festivales con diferentes estructuras
+                            organizativas. En la UCI estos
+                            eventos comenzaron a realizarse en el 2003, cuando todas las facultades presentaron a
+                            sus
+                            talentos por primera vez, en
+                            marzo de ese año, en el antiguo teatro de Torrens.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="images/314505506_507779608062655_4427556144443100111_n.jpg"
+                            class="figure-img img-fluid px-5   w-65 h-65" alt="Relevante-Obra-Arte">
+                    </div>
+
+
+                </div>
+
+
+                </td>
+                </tr>
+                </table>
+
+
+
+
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <div class="container text-secondary">
+                                <div class="row align-items-start py-4 ">
+                                    <div class="col">
+                                        <h1><strong></strong></h1>
+                                        <p class="h5">
+                                            Nuestra institución se caracteriza por un fuerte movimiento artístico
+                                            integrado
+                                            por
+                                            estudiantes y trabajadores, merecedores de importantes reconocimientos a
+                                            nivel
+                                            nacional.
+
+                                            La actividad cultural se organiza y coordina desde la Vicerrectoría de
+                                            Extensión
+                                            Universitaria, con la colaboración y apoyo de las organizaciones
+                                            juveniles y
+                                            estudiantiles
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="images/315017561_509460847894531_7636787050515377600_n.jpg"
+                                            class="figure-img img-fluid px-5   w-65 h-65" alt="Relevante-Obra-Arte">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+
+
+                    </tr>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <div class="container text-secondary">
+                                <div class="row align-items-start py-4 ">
+                                    <div class="col">
+                                        <h1><strong></strong></h1>
+                                        <p class="h5">
+                                            Como parte de la infraestructura que garantiza el desarrollo de las
+                                            artes,
+                                            se
+                                            encuentra el Centro Cultural Wifredo Lam
+                                            que dispone de aulas especializadas para teatro, danza y música. Además,
+                                            cuenta
+                                            con una sala de video, galería de
+                                            artes plásticas, librería, complejo recreativo, plazas y teatros,
+                                            brindando
+                                            así
+                                            la calidad requerida para el desarrollo de
+                                            los festivales.(«Universidad de las Ciencias Informáticas», 2019)
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="images/16-e1515513181940.jpg" class="figure-img img-fluid px-5   w-65 h-65"
+                                            alt="Relevante-Obra-Arte">
+                                    </div>
+
+                        </td>
+                    </tr>
+                </table>
+                </table>
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <div class="container text-secondary">
+                                <div class="row align-items-start py-4 ">
+                                    <div class="col">
+                                        <h1><strong></strong></h1>
+                                        <p class="h5">
+                                            Como parte de la infraestructura que garantiza el desarrollo de las
+                                            artes,
+                                            se
+                                            encuentra el Centro Cultural Wifredo Lam
+                                            que dispone de aulas especializadas para teatro, danza y música. Además,
+                                            cuenta
+                                            con una sala de video, galería de
+                                            artes plásticas, librería, complejo recreativo, plazas y teatros,
+                                            brindando
+                                            así
+                                            la calidad requerida para el desarrollo de
+                                            los festivales.(«Universidad de las Ciencias Informáticas», 2019)
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="images/16-e1515513181940.jpg" class="figure-img img-fluid px-5   w-65 h-65"
+                                            alt="Relevante-Obra-Arte">
+                                    </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+
+                <div class="alert alert-secondary">
+                    <center>Tomado de :https://1library.co/document/</center>
+                </div>
+
+
+                <div class="container-fluid">
+                    <div class="row   flex-column " id="color">
+                        <div class="col">
+                            <footer class="py-3">
+                                <div class="container text-light text-center ">
+                                    <div class="row ">
+                                        <div class="col">
+                                            <h5><strong> PUEDES ENCONTRARNOS EN:</strong> </h5>
+                                        </div>
+
+                                        <div class="container">
+                                            <div class="row gap-1  justify-content-center py-lg-3">
+                                                <div class="col-1">
+                                                    <img src="icons8-whatsapp.svg"
+                                                        class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1 "
+                                                        alt="icons8-whatsapp">
+                                                </div>
+                                                <div class="col-1">
+                                                    <img src="icons8-aplicación-telegrama.svg"
+                                                        class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+                                                        alt="icons8-aplicación-telegrama">
+                                                </div>
+                                                <div class="col-1">
+                                                    <img src="icons8-facebook-f.svg"
+                                                        class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+                                                        alt="icons8-facebook-f">
+                                                </div>
+                                                <div class="col-1">
+                                                    <img src="icons8-twitter.svg"
+                                                        class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+                                                        alt="icons8-twitter">
+                                                </div>
+                                                <div class="col-1">
+                                                    <img src="icons8-instagram-viejo.svg"
+                                                        class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+                                                        alt="icons8-instagram-viejo">
+                                                </div>
+                                            </div>
+                                            <div class="container text-light  text-center">
+                                                <div class="row ">
+                                                    <div class="col">
+                                                        <p4>Universidad de las Ciencias Informáticas La
+                                                            Habana,Cuba.Todos los derechos reservados </p4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+#menu li>a {
+	background-color: #6F2491;
+	color: white;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+}
+
+#menu li>a:hover {
+	color: white;
+	background-color: #6F2491;
+}
+
+#menu>li {
+	float: left;
+	text-align: center
+}
+
+#menu>li>ul {
+	display: none;
+}
+
+#menu>li:hover>ul {
+	display: block;
+}
+
+#color {
+	background-color: #6F2491;
+}
+
+#sin {
+	background-color: #310646;
+}
+
+#border {
+	border-radius: 0px 100px 0px 100px;
+}
+
+#fig {
+	border-radius: 0px 50px 0px 50px;
+}
+
+#colorl {
+	color: beige;
+}
+
+.img-fluida {
+	width: 3000px;
+	height: 1900px;
+}
+
+.nueva {
+	width: 200px;
+	height: 300px;
+	margin-bottom: 100px;
+	padding-bottom: 100px;
+}
+
+#au {
+	padding: 10%;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+#final {
+	position: relative;
+	right: -120px;
+}
+
+.escribir {
+	color: white;
+}
+</style>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Festival de Artistas Aficionados</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<header>
+
+
+		<div class="container-fluid" id="flo">
+			<div class="row  " id="color">
+				<div class="col gap-5">
+					<div class="container-fluid  text-white">
+
+						<div class="col">
+							<nav class="nav gaptext-dark  d-flex justify-content-center  ">
+								<nav class="navbar navbar-expand-lg ">
+									<div class="container-fluid">
+										<nav>
+											<ul id="menu">
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="/index"><strong>
+															INICIO</strong></a></li>
+
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>INSCRIPCIONES</strong></a>
+													<ul>
+
+														<li><a th:href="@{/listar_formularios}"><strong>FORMULARIO
+																	DE INSCRIPCIÓN</strong></a></li>
+
+													</ul></li>
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>CALENDARIO</strong></a></li>
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="/informacion"><strong>INFORMACIÓN</strong></a></li>
+
+												<li><a class="nav-link active px-lg-4 text-light"
+													aria-current="page" href="#"><strong>GESTIONAR</strong></a>
+													<ul>
+
+
+														<li><a th:href="@{/listar_artistas}"><strong>ARTISTA</strong></a></li>
+														<li><a th:href="@{/listar_jurados}"><strong>JURADO</strong></a></li>
+														<li><a th:href="@{/listar_premios}"><strong>PREMIO</strong></a></li>
+														<li><a th:href="@{/listar_grupo_artisticos}"><strong>GRUPO
+																	ARTÍSTICO</strong></a></li>
+														<li><a th:href="@{/listar_usuarios}"><strong>USUARIO</strong></a></li>
+
+													</ul></li>
+												<li>
+													<form>
+
+														<input type="text" id="fname" name="Buscar" size="10">
+														<button class="btn btn-outline-light" type="button">
+															<svg width="20" height="20" class="DocSearch-Search-Icon"
+																viewBox="0 0 20 20">
+                                                                        <path
+																	d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+																	stroke="currentColor" fill="none" fill-rule="evenodd"
+																	stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                    </svg>
+														</button>
+
+
+													</form>
+												</li>
+												<li>
+													<form>
+														<div class="col container-fluid  " id="final">
+															<a href="#" class="dropdown-toggle nav-link user-link"
+																data-toggle="dropdown" aria-expanded="false"><span
+																class="user-img"><img class="rounded-circle"
+																	src="images/icons/purple-linear-outline-person-icon-1578932.jpg"
+																	alt="Perfil" width="24"><span
+																	class="status online"></span></span><span class="escribir">Perfil
+
+															</span></a>
+														</div>
+													</form>
+
+												</li>
+
+											</ul>
+										</nav>
+
+
+
+
+
+
+
+									</div>
+						</div>
+
+
+
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+	</header>
+
+	<div class="row">
+		<div class="col  container-fluid">
+			<img src="images/Vista-HOME.png" class="img-fluid " alt="Vista-HOME">
+		</div>
+	</div>
+
+	<div class="row ">
+		<div class="col">
+
+			<img src="images/Vista-Separador.png" class="img-fluid "
+				alt="Vista-Separador  ">
+
+
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row   text-center text-secondary py-2 pe-md-3 ">
+			<div class="col">
+				<h1>
+					<strong>Relevantes</strong>
+				</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="container text-secondary">
+		<div class="row align-items-start py-4 ">
+			<div class="col">
+				<h1>
+					<strong>Artes Plásticas</strong>
+				</h1>
+				<p class="h2">Atesoramos 33 obras originales donadas por
+					destacadas figuras de las artes plásticas nacionales,en un entorno
+					concebido como una gran galería de arte al aire libre de elevado
+					valor patrimonial</p>
+			</div>
+			<div class="col">
+				<img src="images/Relevante-Obra-Arte.jpg "
+					class="figure-img img-fluid px-5   w-100 h-100" id="border"
+					alt="Relevante-Obra-Arte">
+			</div>
+		</div>
+	</div>
+	<div class="container text-secondary">
+		<div class="row align-items-start">
+			<div class="col">
+				<img src="images/Relevante-Istrutor -Arte.jpg"
+					class="figure-img img-fluid  w-100 h-100" id="fig"
+					alt="Relevante-Istrutor">
+			</div>
+			<div class="col">
+				<h1>
+					<strong>Instructores</strong>
+				</h1>
+				<p class="h2 ">Contamos con profesores e instructores de arte
+					quienes imparten talleres de apreciación y creación, organizan
+					festivales, peñas de trova y literatura, así como intercambios
+					culturales con otros Centros de Educación Superior.</p>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid">
+			<div class="row   flex-column " id="color">
+				<div class="col">
+					<footer class="py-3">
+						<div class="container text-light text-center ">
+							<div class="row ">
+								<div class="col">
+									<h5>
+										<strong> PUEDES ENCONTRARNOS EN:</strong>
+									</h5>
+								</div>
+
+								<div class="container">
+									<div class="row gap-1  justify-content-center py-lg-3">
+										<div class="col-1">
+											<img src="images/icons/icons8-whatsapp.svg"
+												class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1 "
+												alt="icons8-whatsapp">
+										</div>
+										<div class="col-1">
+											<img src="images/icons/icons8-aplicación-telegrama.svg"
+												class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+												alt="icons8-aplicación-telegrama">
+										</div>
+										<div class="col-1">
+											<img src="images/icons/icons8-facebook-f.svg"
+												class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+												alt="icons8-facebook-f">
+										</div>
+										<div class="col-1">
+											<img src="images/icons/icons8-twitter.svg"
+												class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+												alt="icons8-twitter">
+										</div>
+										<div class="col-1">
+											<img src="images/icons/icons8-instagram-viejo.svg"
+												class="img-fluid w-75 h-75  pe-md-2  float-lg-start px-1"
+												alt="icons8-instagram-viejo">
+										</div>
+									</div>
+									<div class="container text-light  text-center">
+										<div class="row ">
+											<div class="col">
+												<p4>Universidad de las Ciencias Informáticas La
+												Habana,Cuba.Todos los derechos reservados </p4>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</footer>
+</body>
+</html>
